@@ -1,0 +1,15 @@
+if( scanf("%d", &Number) == 0)
+{
+	printf("Invalid input!  Exiting .. \n");
+	return 0;  // or return -1 to indicate it's a failure
+}
+
+/*This file is not a c file, it's just for clarification*/
+
+just for clarification, okay?
+
+welcome
+
+add link haha.com
+
+add link2 lol.com

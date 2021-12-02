@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1636813865 source:d:\online 7\online 7\main.c
+	"header.h"
+
+1627388566 source:d:\online 7\online 7\file1.c
+
+1635006426 d:\online 7\online 7\header.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"student.h"
+	"stack.h"
+	"school.h"
+
+1635006426 source:d:\online 7\online 7\arrays.c
+	"header.h"
+
+1635006426 source:d:\online 7\online 7\header.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"student.h"
+	"stack.h"
+	"school.h"
+
+1631321680 source:d:\online 7\online 7\math.c
+	"header.h"
+
+1633615013 source:d:\online 7\online 7\string.c
+	"header.h"
+
+1629897317 source:d:\online 7\online 7\temp.c
+	"header.h"
+
+1630250582 source:d:\online 7\online 7\students.c
+	"header.h"
+
+1634702109 d:\online 7\online 7\student.h
+
+1634702109 source:d:\online 7\online 7\student.c
+
+1634702171 source:d:\online 7\online 7\stack.c
+
+1634685947 d:\online 7\online 7\stack.h
+	"header.h"
+
+1634855132 source:d:\online 7\online 7\list.c
+	"list.h"
+
+1634701471 d:\online 7\online 7\list.h
+	"header.h"
+
+1635564097 source:d:\online 7\online 7\school.c
+	"school.h"
+
+1635059843 d:\online 7\online 7\school.h
+	"header.h"
+
