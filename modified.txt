@@ -13,5 +13,7 @@ next test
 line 4 master
 this is for 01
 
+the new edition
+
 this is for master
 for new remote repo
