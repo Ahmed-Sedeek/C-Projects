@@ -24,26 +24,62 @@
 #define WRITE_PORT(REGISTER, VALUE)        ((REGISTER &= ~PORT_MASK_VALUE)|VALUE)
 
 
-#define X 0xFF
-//00011011
-//00010011
-//00001000
 #include <math.h>
+unsigned int (*ptr) (void) = NULL;
+unsigned int (*arrptr[2]) (void) = {NULL, NULL}; // array of pointers to functions
 
+unsigned int *addone(void);
+unsigned int *retArr(void);
+
+int getAdd(int num1, int num2);
+int getSub(int num1, int num2);
+int perform_arithmatic_operation(int num1, int num2, int (*funPtr) (int num1, int num2)); // callBack
 
 int main(void)
 {
-    /* Define temporary variables */
-    double value;
-    double i, f;
+    int result = perform_arithmatic_operation(3,7,getAdd);
+    printf("%d", result);
 
-    /* Assign the value we will calculate the modf of */
-    value = 1.7;
-
-    /* Calculate the modf of the value returning the fractional and integral parts */
-    f = modf(value, &i);
-
-    /* Display the result of the calculation */
-    printf("The Integral and Fractional parts of %f are %f and %f\n", value, i, f);
     return 0;
+}
+
+int getAdd(int num1, int num2)
+{
+    return num1 + num2;
+}
+
+int getSub(int num1, int num2)
+{
+    return num1 - num2;
+}
+
+int perform_arithmatic_operation(int num1, int num2, int (*funPtr) (int num1, int num2))
+{
+    if(NULL == funPtr)
+    {
+        return 0;
+    }
+    else if(NULL != funPtr)
+    {
+        int result = funPtr(num1, num2);
+        return result;
+    }
+}
+
+
+
+
+
+
+unsigned int *addone(void)
+{
+    static unsigned int var = 5;
+    var++;
+    return &var;
+}
+
+unsigned int *retArr(void)
+{
+    static unsigned int arr[3] = {1,2,3};
+    return arr;
 }
